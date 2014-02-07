@@ -1,5 +1,5 @@
 //
-//  MyConferenceViewController.h
+//  SignUpViewController.h
 //  MyConference
 //
 //  Created by Pedro Morgado on 07/02/14.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MyConferenceViewController : UIViewController
+@interface SignUpViewController : UIViewController
 
 @end

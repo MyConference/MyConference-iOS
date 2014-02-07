@@ -15,13 +15,16 @@
 		F51ACD7D18A53C6600DE4596 /* MyConferenceAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F51ACD7C18A53C6600DE4596 /* MyConferenceAppDelegate.m */; };
 		F51ACD8018A53C6600DE4596 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F51ACD7E18A53C6600DE4596 /* Main_iPhone.storyboard */; };
 		F51ACD8318A53C6600DE4596 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F51ACD8118A53C6600DE4596 /* Main_iPad.storyboard */; };
-		F51ACD8618A53C6600DE4596 /* MyConferenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F51ACD8518A53C6600DE4596 /* MyConferenceViewController.m */; };
 		F51ACD8818A53C6600DE4596 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F51ACD8718A53C6600DE4596 /* Images.xcassets */; };
 		F51ACD8F18A53C6600DE4596 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F51ACD8E18A53C6600DE4596 /* XCTest.framework */; };
 		F51ACD9018A53C6600DE4596 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F51ACD6C18A53C6600DE4596 /* Foundation.framework */; };
 		F51ACD9118A53C6600DE4596 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F51ACD7018A53C6600DE4596 /* UIKit.framework */; };
 		F51ACD9918A53C6600DE4596 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F51ACD9718A53C6600DE4596 /* InfoPlist.strings */; };
 		F51ACD9B18A53C6600DE4596 /* MyConferenceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F51ACD9A18A53C6600DE4596 /* MyConferenceTests.m */; };
+		F51ACDA618A53EBD00DE4596 /* LaunchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F51ACDA518A53EBD00DE4596 /* LaunchViewController.m */; };
+		F51ACDAA18A5416500DE4596 /* AccessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F51ACDA918A5416500DE4596 /* AccessViewController.m */; };
+		F51ACDAD18A543C600DE4596 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F51ACDAC18A543C600DE4596 /* SignUpViewController.m */; };
+		F51ACDB018A543DE00DE4596 /* LogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F51ACDAF18A543DE00DE4596 /* LogInViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,14 +50,20 @@
 		F51ACD7C18A53C6600DE4596 /* MyConferenceAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyConferenceAppDelegate.m; sourceTree = "<group>"; };
 		F51ACD7F18A53C6600DE4596 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
 		F51ACD8218A53C6600DE4596 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
-		F51ACD8418A53C6600DE4596 /* MyConferenceViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyConferenceViewController.h; sourceTree = "<group>"; };
-		F51ACD8518A53C6600DE4596 /* MyConferenceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyConferenceViewController.m; sourceTree = "<group>"; };
 		F51ACD8718A53C6600DE4596 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		F51ACD8D18A53C6600DE4596 /* MyConferenceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyConferenceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F51ACD8E18A53C6600DE4596 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		F51ACD9618A53C6600DE4596 /* MyConferenceTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MyConferenceTests-Info.plist"; sourceTree = "<group>"; };
 		F51ACD9818A53C6600DE4596 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F51ACD9A18A53C6600DE4596 /* MyConferenceTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyConferenceTests.m; sourceTree = "<group>"; };
+		F51ACDA418A53EBD00DE4596 /* LaunchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LaunchViewController.h; sourceTree = "<group>"; };
+		F51ACDA518A53EBD00DE4596 /* LaunchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaunchViewController.m; sourceTree = "<group>"; };
+		F51ACDA818A5416500DE4596 /* AccessViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccessViewController.h; sourceTree = "<group>"; };
+		F51ACDA918A5416500DE4596 /* AccessViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccessViewController.m; sourceTree = "<group>"; };
+		F51ACDAB18A543C600DE4596 /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
+		F51ACDAC18A543C600DE4596 /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
+		F51ACDAE18A543DE00DE4596 /* LogInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogInViewController.h; sourceTree = "<group>"; };
+		F51ACDAF18A543DE00DE4596 /* LogInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogInViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,13 +123,12 @@
 		F51ACD7218A53C6600DE4596 /* MyConference */ = {
 			isa = PBXGroup;
 			children = (
+				F51ACDA718A53F0E00DE4596 /* Controllers */,
+				F51ACD8718A53C6600DE4596 /* Images.xcassets */,
+				F51ACD8118A53C6600DE4596 /* Main_iPad.storyboard */,
+				F51ACD7E18A53C6600DE4596 /* Main_iPhone.storyboard */,
 				F51ACD7B18A53C6600DE4596 /* MyConferenceAppDelegate.h */,
 				F51ACD7C18A53C6600DE4596 /* MyConferenceAppDelegate.m */,
-				F51ACD7E18A53C6600DE4596 /* Main_iPhone.storyboard */,
-				F51ACD8118A53C6600DE4596 /* Main_iPad.storyboard */,
-				F51ACD8418A53C6600DE4596 /* MyConferenceViewController.h */,
-				F51ACD8518A53C6600DE4596 /* MyConferenceViewController.m */,
-				F51ACD8718A53C6600DE4596 /* Images.xcassets */,
 				F51ACD7318A53C6600DE4596 /* Supporting Files */,
 			);
 			path = MyConference;
@@ -153,6 +161,21 @@
 				F51ACD9718A53C6600DE4596 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F51ACDA718A53F0E00DE4596 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F51ACDA818A5416500DE4596 /* AccessViewController.h */,
+				F51ACDA918A5416500DE4596 /* AccessViewController.m */,
+				F51ACDA418A53EBD00DE4596 /* LaunchViewController.h */,
+				F51ACDA518A53EBD00DE4596 /* LaunchViewController.m */,
+				F51ACDAE18A543DE00DE4596 /* LogInViewController.h */,
+				F51ACDAF18A543DE00DE4596 /* LogInViewController.m */,
+				F51ACDAB18A543C600DE4596 /* SignUpViewController.h */,
+				F51ACDAC18A543C600DE4596 /* SignUpViewController.m */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -255,8 +278,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				F51ACD7D18A53C6600DE4596 /* MyConferenceAppDelegate.m in Sources */,
-				F51ACD8618A53C6600DE4596 /* MyConferenceViewController.m in Sources */,
+				F51ACDAD18A543C600DE4596 /* SignUpViewController.m in Sources */,
+				F51ACDB018A543DE00DE4596 /* LogInViewController.m in Sources */,
 				F51ACD7918A53C6600DE4596 /* main.m in Sources */,
+				F51ACDAA18A5416500DE4596 /* AccessViewController.m in Sources */,
+				F51ACDA618A53EBD00DE4596 /* LaunchViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

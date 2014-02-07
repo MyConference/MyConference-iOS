@@ -13,6 +13,26 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    
+    //Save application ID for Heroku Dev
+    if([[NSUserDefaults standardUserDefaults] objectForKey:@"application_id_heroku_dev"] == NULL){
+        NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
+        [ud setObject:@"0bbee9ee-3956-4651-ac44-0f3b1935198a" forKey:@"application_id_heroku_dev"];
+        [ud synchronize];
+    }
+    NSLog(@"APPLICATION ID: %@", [[NSUserDefaults standardUserDefaults] objectForKey:@"application_id_heroku_dev"]);
+    
+    //Generate UUID if not exits
+    if([[NSUserDefaults standardUserDefaults] objectForKey:@"device_id"] == NULL){
+        CFUUIDRef uuid = CFUUIDCreate(NULL);
+        NSString *deviceID = (NSString *) CFBridgingRelease(CFUUIDCreateString(NULL, uuid));
+    
+        NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
+        [ud setObject:deviceID forKey:@"device_id"];
+        [ud synchronize];
+    }
+    NSLog(@"DEVICE ID: %@", [[NSUserDefaults standardUserDefaults] objectForKey:@"device_id"]);
+    
     return YES;
 }
 							
