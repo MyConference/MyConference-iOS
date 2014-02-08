@@ -35,7 +35,6 @@
     
     //Dismiss the keyboard when press the screen
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissKeyboard)];
-    
     [self.view addGestureRecognizer:tap];
 }
 
@@ -125,7 +124,7 @@
         
         if (statusCode == 200)
         {
-            //[self performSegueWithIdentifier:@"LogInToDashboardSegue" sender:self];
+            [self performSegueWithIdentifier:@"LogInToConferencesSegue" sender:self];
         } else {
             UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"Error" message: @"Wrong email or password" delegate: self cancelButtonTitle: @"Ok" otherButtonTitles: nil];
             [alert show];

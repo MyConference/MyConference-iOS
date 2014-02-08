@@ -25,6 +25,7 @@
 		F51ACDAA18A5416500DE4596 /* AccessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F51ACDA918A5416500DE4596 /* AccessViewController.m */; };
 		F51ACDAD18A543C600DE4596 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F51ACDAC18A543C600DE4596 /* SignUpViewController.m */; };
 		F51ACDB018A543DE00DE4596 /* LogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F51ACDAF18A543DE00DE4596 /* LogInViewController.m */; };
+		F51ACDB618A66BAC00DE4596 /* ConferencesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F51ACDB518A66BAC00DE4596 /* ConferencesViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,8 @@
 		F51ACDAC18A543C600DE4596 /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
 		F51ACDAE18A543DE00DE4596 /* LogInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogInViewController.h; sourceTree = "<group>"; };
 		F51ACDAF18A543DE00DE4596 /* LogInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogInViewController.m; sourceTree = "<group>"; };
+		F51ACDB418A66BAC00DE4596 /* ConferencesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConferencesViewController.h; sourceTree = "<group>"; };
+		F51ACDB518A66BAC00DE4596 /* ConferencesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConferencesViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +171,8 @@
 			children = (
 				F51ACDA818A5416500DE4596 /* AccessViewController.h */,
 				F51ACDA918A5416500DE4596 /* AccessViewController.m */,
+				F51ACDB418A66BAC00DE4596 /* ConferencesViewController.h */,
+				F51ACDB518A66BAC00DE4596 /* ConferencesViewController.m */,
 				F51ACDA418A53EBD00DE4596 /* LaunchViewController.h */,
 				F51ACDA518A53EBD00DE4596 /* LaunchViewController.m */,
 				F51ACDAE18A543DE00DE4596 /* LogInViewController.h */,
@@ -283,6 +288,7 @@
 				F51ACD7918A53C6600DE4596 /* main.m in Sources */,
 				F51ACDAA18A5416500DE4596 /* AccessViewController.m in Sources */,
 				F51ACDA618A53EBD00DE4596 /* LaunchViewController.m in Sources */,
+				F51ACDB618A66BAC00DE4596 /* ConferencesViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
