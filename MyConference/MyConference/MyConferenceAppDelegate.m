@@ -33,6 +33,12 @@
     }
     NSLog(@"DEVICE ID: %@", [[NSUserDefaults standardUserDefaults] objectForKey:@"device_id"]);
     
+    //Log tokens
+    NSLog(@"ACCESS TOKEN: %@", [[NSUserDefaults standardUserDefaults] objectForKey:@"access_token"]);
+    NSLog(@"ACCESS TOKEN EXPIRES: %@", [[NSUserDefaults standardUserDefaults] objectForKey:@"access_token_expires"]);
+    NSLog(@"REFRESH TOKEN: %@", [[NSUserDefaults standardUserDefaults] objectForKey:@"refresh_token"]);
+    NSLog(@"REFRESH TOKEN EXPIRES: %@", [[NSUserDefaults standardUserDefaults] objectForKey:@"refresh_token_expires"]);
+    
     return YES;
 }
 							

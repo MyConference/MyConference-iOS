@@ -12,6 +12,7 @@
 @property (strong, nonatomic) IBOutlet UITextField *emailTextField;
 @property (strong, nonatomic) IBOutlet UITextField *passwordTextField;
 @property (strong, nonatomic) NSMutableData *responseData;
+@property (strong, nonatomic) UIActivityIndicatorView *activityIndicator;
 
 - (IBAction)login:(id)sender;
 
@@ -64,6 +65,13 @@
 - (IBAction)login:(id)sender {
     if(self.passwordTextField.text.length > 8){
         NSLog(@"BETA LOGIN");
+        
+        //Shows activity indicator
+        self.activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+        self.activityIndicator.center=self.view.center;
+        [self.activityIndicator startAnimating];
+        [self.view addSubview:self.activityIndicator];
+        
         NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:@"http://myconf-api-dev.herokuapp.com/auth"]];
     
         [request setHTTPMethod:@"POST"];
@@ -97,6 +105,7 @@
             self.responseData = [NSMutableData data];
         } else {
             // Inform the user that the connection failed.
+            [self.activityIndicator stopAnimating];
             UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"Error" message: @"The connection to the server has failed" delegate: self cancelButtonTitle: @"OK" otherButtonTitles: nil];
             [alert show];
         }
@@ -124,8 +133,10 @@
         
         if (statusCode == 200)
         {
+            [self.activityIndicator stopAnimating];
             [self performSegueWithIdentifier:@"LogInToConferencesSegue" sender:self];
         } else {
+            [self.activityIndicator stopAnimating];
             UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"Error" message: @"Wrong email or password" delegate: self cancelButtonTitle: @"Ok" otherButtonTitles: nil];
             [alert show];
         }
@@ -146,11 +157,22 @@
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection {
     NSString *dataString = [[NSString alloc] initWithData:self.responseData encoding:NSUTF8StringEncoding];
     NSLog(@"LOGIN DATA: %@", dataString);
+    
+    NSError* error;
+    NSDictionary* json = [NSJSONSerialization JSONObjectWithData:self.responseData options:kNilOptions error:&error];
+    
+    NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
+    [ud setObject:[json objectForKey:@"access_token"] forKey:@"access_token"];
+    [ud setObject:[json objectForKey:@"access_token_expires"] forKey:@"access_token_expires"];
+    [ud setObject:[json objectForKey:@"refresh_token"] forKey:@"refresh_token"];
+    [ud setObject:[json objectForKey:@"refresh_token_expires"] forKey:@"refresh_token_expires"];
+    [ud synchronize];
 }
 
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error
 {
     // Inform the user if the connection failed
+    [self.activityIndicator stopAnimating];
     NSLog(@"Connection failed! Error - %@ %@",
           [error localizedDescription],
           [[error userInfo] objectForKey:NSURLErrorFailingURLStringErrorKey]);
