@@ -30,7 +30,11 @@
 }
 
 - (void) viewDidAppear:(BOOL)animated{
-    [self performSegueWithIdentifier:@"LaunchToAccessSegue" sender:self];
+    if([[NSUserDefaults standardUserDefaults] objectForKey:@"access_token"] == NULL){
+        [self performSegueWithIdentifier:@"LaunchToAccessSegue" sender:self];
+    } else {
+        [self performSegueWithIdentifier:@"LaunchToConferencesSegue" sender:self];
+    }
 }
 
 - (void)didReceiveMemoryWarning

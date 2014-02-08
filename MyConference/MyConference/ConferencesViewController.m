@@ -9,6 +9,7 @@
 #import "ConferencesViewController.h"
 
 @interface ConferencesViewController ()
+- (IBAction)logOut:(id)sender;
 
 @end
 
@@ -114,5 +115,16 @@
 }
 
  */
+
+- (IBAction)logOut:(id)sender {
+    NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
+    [ud setObject:NULL forKey:@"access_token"];
+    [ud setObject:NULL forKey:@"access_token_expires"];
+    [ud setObject:NULL forKey:@"refresh_token"];
+    [ud setObject:NULL forKey:@"refresh_token_expires"];
+    [ud synchronize];
+    
+    [self performSegueWithIdentifier:@"LogOutSegue" sender:self];
+}
 
 @end

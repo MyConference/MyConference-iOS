@@ -20,6 +20,7 @@
                     </view>
                     <connections>
                         <segue destination="my1-Ch-SbX" kind="modal" identifier="LaunchToAccessSegue" modalTransitionStyle="crossDissolve" id="diX-qs-RKe"/>
+                        <segue destination="zUh-Iy-Lif" kind="modal" identifier="LaunchToConferencesSegue" modalTransitionStyle="crossDissolve" id="kkx-Wo-YhK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -113,7 +114,16 @@
                             <outlet property="delegate" destination="hlw-la-Thc" id="QhO-vS-pB3"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Conferences" id="79R-Xm-cvS"/>
+                    <navigationItem key="navigationItem" title="Conferences" id="79R-Xm-cvS">
+                        <barButtonItem key="leftBarButtonItem" title="Log Out" id="BIg-5L-cH0">
+                            <connections>
+                                <action selector="logOut:" destination="hlw-la-Thc" id="F9H-fY-ZIc"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="my1-Ch-SbX" kind="modal" identifier="LogOutSegue" modalTransitionStyle="crossDissolve" id="sHS-tI-fLW"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="06W-rq-5KB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -257,6 +267,7 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="bo2-AQ-PKF"/>
+        <segue reference="sHS-tI-fLW"/>
+        <segue reference="kkx-Wo-YhK"/>
     </inferredMetricsTieBreakers>
 </document>
